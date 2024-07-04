@@ -275,7 +275,6 @@ impl Editor {
         world.resource_scope(|world, mut editor: Mut<Editor>| {
             let Ok(mut egui_context) = world
                 .query::<&mut EguiContext>()
-                .get_mut(world, editor.on_window)
             else {
                 return;
             };
